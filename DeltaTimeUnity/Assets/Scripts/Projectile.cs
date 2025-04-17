@@ -7,11 +7,12 @@ public class Projectile : MonoBehaviour
 
     public float moveSpeed;
     public GameObject explosionPrefab; // Prefab for explosion effect
+    private PointManager pointManager; // Reference to the PointManager script
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        pointManager = GameObject.Find("PointManager").GetComponent<PointManager>(); // Find the PointManager in the scene
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class Projectile : MonoBehaviour
         {
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Create explosion effect
             Destroy(collision.gameObject);
+            pointManager.UpdateScore(50); // Update the score in the PointManager
             Destroy(gameObject);
         }
         // Check if the projectile collides with a wall
