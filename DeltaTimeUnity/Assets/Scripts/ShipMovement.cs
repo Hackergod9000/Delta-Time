@@ -21,7 +21,7 @@ public class ShipMovement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Boundary")
         {
-            transform.position = new Vector3 (transform.position.x, transform.position.y -1, transform.position.z); // Reset the position of the ship to its original position
+            transform.position = new Vector3 (transform.position.x, transform.position.y -0.5f, transform.position.z); // Reset the position of the ship to its original position
             moveSpeed *= -1; // Reverse the direction of the ship when it hits the boundary
         }
     }
