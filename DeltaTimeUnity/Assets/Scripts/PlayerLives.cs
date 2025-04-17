@@ -54,7 +54,7 @@ public class PlayerLives : MonoBehaviour
         // Check if the player collides with an enemy
         if (collision.gameObject.CompareTag("Enemy Bullet"))
         {
-            Debug.Log("Player hit by bullet"); // Log the collision for debugging
+           
             Destroy(collision.gameObject); // Destroy the enemy object
             Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Create explosion effect
            lives -= 1; // Decrease the player's lives by 1

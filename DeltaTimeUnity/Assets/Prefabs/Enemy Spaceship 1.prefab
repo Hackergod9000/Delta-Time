@@ -144,3 +144,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyProjectile: {fileID: 2494709009809227385, guid: adc313d4beb42584499ff4efaeda10da, type: 3}
+  spawnTimer: 0
+  spawnMax: 5
+  spawnMin: 1
