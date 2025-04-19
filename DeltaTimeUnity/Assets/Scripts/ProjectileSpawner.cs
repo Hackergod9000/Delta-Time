@@ -19,6 +19,7 @@ public class ProjectileSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         spawnTimer -= Time.deltaTime; // Decrease the spawn timer by the time since the last frame
         if (spawnTimer <= 0)
         {
