@@ -5,7 +5,6 @@ using UnityEngine;
 public class BossMovement : MonoBehaviour
 {
     public float moveSpeed = 2f; 
-    public GameObject explosionPrefab; // Prefab for explosion effect
     // Start is called before the first frame update
     void Start()
     {

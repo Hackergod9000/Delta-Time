@@ -3508,7 +3508,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 2
-  explosionPrefab: {fileID: 0}
 --- !u!114 &1894712117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3524,7 +3523,7 @@ MonoBehaviour:
   maxHealth: 50
   bossProjectile: {fileID: 2494709009809227385, guid: adc313d4beb42584499ff4efaeda10da, type: 3}
   fireInterval: 2
-  explosionPrefab: {fileID: 0}
+  explosionPrefab: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
   gamewonPanel: {fileID: 1943435636}
 --- !u!114 &1894712118
 MonoBehaviour:
@@ -3759,6 +3758,10 @@ PrefabInstance:
     - target: {fileID: 4374253398863112162, guid: d095855bc51a59d4394c9e4cee4e236e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5050808542424316190, guid: d095855bc51a59d4394c9e4cee4e236e, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8132850508869790218, guid: d095855bc51a59d4394c9e4cee4e236e, type: 3}
       propertyPath: m_Enabled

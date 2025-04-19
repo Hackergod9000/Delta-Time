@@ -12,7 +12,7 @@ public class BossEnemy : MonoBehaviour
 
     private float fireTimer;
     private PointManager pointManager; // Reference to the PointManager script
-     public GameObject gamewonPanel;
+     public GameObject gamewonPanel ;
 
     void Start()
     {
@@ -47,11 +47,7 @@ public class BossEnemy : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            pointManager.UpdateScore(500);
             Die();
-            gamewonPanel.SetActive(true);
-            Time.timeScale = 0;
-            
         }
     }
 
@@ -59,6 +55,10 @@ public class BossEnemy : MonoBehaviour
     {
         // You can play explosion, give score, etc.
         Destroy(gameObject);
+        Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Create explosion effect
+        pointManager.UpdateScore(500);
+        gamewonPanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -67,6 +67,7 @@ public class BossEnemy : MonoBehaviour
         {
             TakeDamage(1); // Or get damage from bullet
             Destroy(collision.gameObject);
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity); // Create explosion effect
         }
     }
 }

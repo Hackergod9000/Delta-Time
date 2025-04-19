@@ -3,7 +3,6 @@ using UnityEngine;
 public class BossProjectile : MonoBehaviour
 {
     public float speed = 4f;
-    public GameObject explosionPrefab; // Prefab for explosion effect
 
     void Update()
     {
